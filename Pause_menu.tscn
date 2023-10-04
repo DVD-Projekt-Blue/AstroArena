@@ -1,0 +1,125 @@
+[gd_scene load_steps=14 format=3 uid="uid://ds1r137wkn0fn"]
+
+[ext_resource type="Script" path="res://PauseMenu.gd" id="1_0orjd"]
+[ext_resource type="FontFile" uid="uid://dp75um7jdyrun" path="res://imports/fonts/Eurostile.ttf" id="1_wefxg"]
+
+[sub_resource type="FontVariation" id="FontVariation_wxi7n"]
+base_font = ExtResource("1_wefxg")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsmad"]
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vaph"]
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[sub_resource type="GDScript" id="GDScript_clc5a"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+#func _ready():
+#	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#@warning_ignore(\"unused_parameter\")
+#func _process(delta):
+#	get_tree().paused = not get_tree().paused
+#	$PauseMenu.visible = false
+#	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+"
+
+[sub_resource type="FontVariation" id="FontVariation_1503p"]
+base_font = ExtResource("1_wefxg")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7sikf"]
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xs1vy"]
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_pc13a"]
+base_font = ExtResource("1_wefxg")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_41hp0"]
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7i3k"]
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[sub_resource type="GDScript" id="GDScript_5ef7c"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+#func _ready():
+#	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+#func _on_pressed():
+#	get_tree().quit()
+"
+
+[node name="PauseMenu" type="Node2D"]
+position = Vector2(960, 540)
+script = ExtResource("1_0orjd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -300.0
+offset_right = 200.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PlayBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_wxi7n")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_jsmad")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5vaph")
+text = "Play"
+icon_alignment = 1
+script = SubResource("GDScript_clc5a")
+
+[node name="MainMenuBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_1503p")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_7sikf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xs1vy")
+text = "Main Menu"
+
+[node name="ExitBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_pc13a")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_41hp0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f7i3k")
+text = "Exit"
+script = SubResource("GDScript_5ef7c")

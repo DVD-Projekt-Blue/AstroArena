@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqd06ygns2kbr"]
+
+[ext_resource type="Script" path="res://bullet.gd" id="1_dn7ot"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgk2j"]
+albedo_color = Color(1, 0.870588, 0.592157, 1)
+emission_enabled = true
+emission = Color(1, 0.709804, 0.32549, 1)
+emission_energy_multiplier = 15.2
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0tmhg"]
+material = SubResource("StandardMaterial3D_hgk2j")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7uhu"]
+albedo_color = Color(1, 0.709804, 0.32549, 1)
+emission_enabled = true
+emission = Color(1, 0.709804, 0.32549, 1)
+emission_energy_multiplier = 8.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ioxm1"]
+direction = Vector3(0, 0, 1)
+spread = 20.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 3.0
+initial_velocity_max = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_td4yw"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="Bullet" type="Node3D"]
+script = ExtResource("1_dn7ot")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, -4.37114e-08, -0.4, 0, 1, -1.74846e-08, 0, 0, 0)
+target_position = Vector3(0, 0, -0.5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, -1.31134e-08, -0.05, 0, 0.3, -2.18557e-09, 0, 0, 0)
+mesh = SubResource("CylinderMesh_0tmhg")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000793546, -0.00256205, 0.343327)
+material_override = SubResource("StandardMaterial3D_q7uhu")
+emitting = false
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_ioxm1")
+draw_pass_1 = SubResource("BoxMesh_td4yw")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

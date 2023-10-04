@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pioneer Default Cockpit
+* source:	https://sketchfab.com/3d-models/pioneer-default-cockpit-b6f4adbef70549d0852f7ed96ed0b371
+* author:	bszlrd (https://sketchfab.com/bszlrd)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pioneer Default Cockpit" (https://sketchfab.com/3d-models/pioneer-default-cockpit-b6f4adbef70549d0852f7ed96ed0b371) by bszlrd (https://sketchfab.com/bszlrd) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)

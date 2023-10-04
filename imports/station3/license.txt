@@ -1,0 +1,11 @@
+Model Information:
+* title:	Space Station V (2001: A Space Odyssey)
+* source:	https://sketchfab.com/3d-models/space-station-v-2001-a-space-odyssey-cc2f60147e3b407d833685cb2349708a
+* author:	uperesito (https://sketchfab.com/uperesito)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Space Station V (2001: A Space Odyssey)" (https://sketchfab.com/3d-models/space-station-v-2001-a-space-odyssey-cc2f60147e3b407d833685cb2349708a) by uperesito (https://sketchfab.com/uperesito) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

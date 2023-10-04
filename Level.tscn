@@ -1,0 +1,57 @@
+[gd_scene load_steps=11 format=3 uid="uid://d3mqn4lo1yhif"]
+
+[ext_resource type="Script" path="res://Level.gd" id="1_4hnoh"]
+[ext_resource type="PackedScene" uid="uid://n440x4shiu44" path="res://Cockpit.tscn" id="1_l4waf"]
+[ext_resource type="Texture2D" uid="uid://dxf7detsnv437" path="res://space/hdr.png" id="1_sgc6w"]
+[ext_resource type="PackedScene" uid="uid://ngk568eow8bk" path="res://imports/GU-97.tscn" id="2_485lo"]
+[ext_resource type="PackedScene" uid="uid://ddgevdqt1br2k" path="res://station4.tscn" id="6_iyb8r"]
+[ext_resource type="PackedScene" uid="uid://cnaed0cfsttjq" path="res://test.tscn" id="7_0qscx"]
+[ext_resource type="PackedScene" uid="uid://bcsx8ow7wr6tt" path="res://Pmenu.tscn" id="7_vtarl"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1acmr"]
+panorama = ExtResource("1_sgc6w")
+
+[sub_resource type="Sky" id="Sky_w7017"]
+sky_material = SubResource("PanoramaSkyMaterial_1acmr")
+
+[sub_resource type="Environment" id="Environment_r05y7"]
+background_mode = 2
+background_energy_multiplier = 2.0
+sky = SubResource("Sky_w7017")
+sky_rotation = Vector3(0, 3.14159, 0)
+ssao_enabled = true
+ssao_intensity = 1000.0
+ssao_detail = 5.0
+ssao_sharpness = 0.0
+fog_light_energy = 0.0
+volumetric_fog_density = 0.111
+
+[node name="Level" type="Node3D"]
+script = ExtResource("1_4hnoh")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_r05y7")
+
+[node name="GU-97" parent="." instance=ExtResource("2_485lo")]
+process_mode = 1
+
+[node name="Cockpit" parent="GU-97" instance=ExtResource("1_l4waf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28, -0.96)
+
+[node name="Camera3D" type="Camera3D" parent="GU-97/Cockpit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.08616e-07, -6.55651e-07)
+
+[node name="Camera3D2" type="Camera3D" parent="GU-97/Cockpit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.24157, 18.36)
+fov = 90.6
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.994151, 0.107999, 0, -0.107999, -0.994151, -0.0427413, 4.66855, 0.121574)
+
+[node name="PauseMenu" parent="." instance=ExtResource("7_vtarl")]
+
+[node name="Station" parent="." instance=ExtResource("6_iyb8r")]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0, -136.05)
+
+[node name="test" parent="." instance=ExtResource("7_0qscx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.465)
