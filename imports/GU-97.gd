@@ -23,15 +23,17 @@ var input_response = 6
 @onready var barrel_right = $RayCast3D2
 @onready var barrel_left = $RayCast3D
 @onready var mesh = $Mesh2
+@onready var start_shooting = $ShootingStart
+@onready var shooting = $Shooting
+@onready var end_shooting = $ShootingEnd
 
 var bullet = load("res://bullet.tscn")
-var instance
-var instance2
+var instanceRight
+var instanceLeft
 
 
 func _ready():
 	pass
-	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 
 func _input(event):
@@ -45,6 +47,15 @@ func _input(event):
 #		pitch_input = pitch_input.normalized()
 #		yaw_input = yaw_input.normalized()
 
+func shoot(): 
+	instanceLeft = bullet.instantiate();
+	instanceRight = bullet.instantiate();
+	instanceLeft.position = barrel_left.global_position
+	instanceRight.position = barrel_right.global_position
+	instanceLeft.transform.basis = barrel_left.global_transform.basis
+	instanceRight.transform.basis = barrel_right.global_transform.basis
+	get_parent().add_child(instanceLeft)
+	get_parent().add_child(instanceRight)
 
 
 func get_input(delta):
@@ -70,16 +81,21 @@ func get_input(delta):
 	speed.y = lerp(speed.y, input_vector.y * MAX_UPDOWN_SPEED, ACCELERATION * delta)
 	speed.z = lerp(speed.z, input_vector.z * MAX_FORWARD_SPEED, ACCELERATION * delta)
 	
+	
 	if Input.is_action_pressed("shoot"):
-		instance = bullet.instantiate();
-		instance2 = bullet.instantiate();
-		instance.position = barrel_left.global_position
-		instance2.position = barrel_right.global_position
-		instance.transform.basis = barrel_left.global_transform.basis
-		instance2.transform.basis = barrel_right.global_transform.basis
-		get_parent().add_child(instance)
-		get_parent().add_child(instance2)
-	#	get_tree().paused = not get_tree().paused
+		#await get_tree().create_timer(0.2).timeout
+		shoot()
+	
+	if Input.is_action_just_pressed("shoot"):
+		#start_shooting.play()
+		#await get_tree().create_timer(1.0).timeout
+		shooting.play()
+		
+
+	if Input.is_action_just_released("shoot"):
+		#start_shooting.stop()
+		shooting.stop()
+		end_shooting.play()
 
 func _physics_process(delta):
 	get_input(delta)

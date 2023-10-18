@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cncc7cslpmsu7"]
+
+[ext_resource type="PackedScene" uid="uid://b78j68qwv2skg" path="res://imports/corvette/scene.gltf" id="1_bvwq5"]
+[ext_resource type="Script" path="res://corvette.gd" id="2_xb0d8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kdee1"]
+
+[node name="Corvette" groups=["enemies"] instance=ExtResource("1_bvwq5")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+floor_stop_on_slope = false
+floor_block_on_wall = false
+floor_max_angle = 0.0
+script = ExtResource("2_xb0d8")
+
+[node name="Sketchfab_model" parent="." index="0"]
+transform = Transform3D(0.005, 0, 0, 0, -2.18557e-10, 0.005, 0, -0.005, -2.18557e-10, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(36.645, 0, 0, 0, 8.36, 0, 0, 0, 82.985, 0, 0, 0)
+shape = SubResource("BoxShape3D_kdee1")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." index="2"]

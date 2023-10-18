@@ -1,7 +1,12 @@
-StaticBody3D
-CollisionShape3D
-Area3D
 Timer
+AudioStreamPlayer3D
+AudioStreamPlayer
+NavigationRegion3D
+NavigationAgent3D
+CollisionShape3D
+CharacterBody3D
+StaticBody3D
+Area3D
 GPUParticles3D
 RayCast3D
 MeshInstance3D
@@ -18,6 +23,5 @@ Node2D
 VisibleOnScreenEnabler2D
 TextureRect
 Camera3D
-CharacterBody3D
 DirectionalLight3D
 WorldEnvironment

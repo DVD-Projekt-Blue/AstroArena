@@ -1,0 +1,11 @@
+Model Information:
+* title:	Federal Corvette
+* source:	https://sketchfab.com/3d-models/federal-corvette-53be2398eed14a6ab9a9195de98ff134
+* author:	andreas9343 (https://sketchfab.com/andreas9343)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Federal Corvette" (https://sketchfab.com/3d-models/federal-corvette-53be2398eed14a6ab9a9195de98ff134) by andreas9343 (https://sketchfab.com/andreas9343) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
