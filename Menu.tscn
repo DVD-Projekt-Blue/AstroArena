@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://e1m1ngajve62"]
+[gd_scene load_steps=16 format=3 uid="uid://e1m1ngajve62"]
 
 [ext_resource type="FontFile" uid="uid://dp75um7jdyrun" path="res://imports/fonts/Eurostile.ttf" id="1_hgtaf"]
 [ext_resource type="Script" path="res://Menu.gd" id="1_ujgaq"]
@@ -63,34 +63,16 @@ bg_color = Color(1, 0.588235, 0.156863, 1)
 content_margin_left = 20.0
 bg_color = Color(1, 0.588235, 0.156863, 1)
 
-[sub_resource type="GDScript" id="GDScript_6rvja"]
-script/source = "extends Button
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
-
-
-func _on_pressed():
-	get_tree().quit()
-"
-
-[node name="Node2D" type="Node2D"]
+[node name="MainMenu" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_ujgaq")
 
 [node name="Label" type="Label" parent="."]
 offset_top = 10.0
-offset_right = 600.0
+offset_right = 660.0
 offset_bottom = 120.0
 theme_override_fonts/font = ExtResource("1_hgtaf")
-text = "Astro Arena"
+text = "ASTRO ARENA"
 label_settings = SubResource("LabelSettings_ydy06")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -109,7 +91,7 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0esi4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_dlj1v")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_riqqn")
-text = "Play"
+text = "PLAY"
 alignment = 0
 icon_alignment = 1
 script = SubResource("GDScript_1x0gg")
@@ -124,11 +106,70 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(1, 0.588235, 0.156863, 1)
 theme_override_fonts/font = SubResource("FontVariation_vwedr")
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4rc3i")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ou8na")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_15jub")
-text = "Options"
+text = "OPTIONS"
+alignment = 0
+icon_alignment = 1
+
+[node name="Controls" type="Button" parent="OptionsButton"]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 600.0
+offset_bottom = 80.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_vwedr")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4rc3i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ou8na")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_15jub")
+text = "Controls"
+alignment = 0
+icon_alignment = 1
+
+[node name="Graphics" type="Button" parent="OptionsButton"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 80.0
+offset_right = 600.0
+offset_bottom = 160.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_vwedr")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4rc3i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ou8na")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_15jub")
+text = "Graphics"
+alignment = 0
+icon_alignment = 1
+
+[node name="Audio" type="Button" parent="OptionsButton"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 160.0
+offset_right = 600.0
+offset_bottom = 240.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_fonts/font = SubResource("FontVariation_vwedr")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4rc3i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ou8na")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_15jub")
+text = "Audio"
 alignment = 0
 icon_alignment = 1
 
@@ -143,14 +184,13 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(1, 0.588235, 0.156863, 1)
 theme_override_fonts/font = SubResource("FontVariation_vwedr")
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_fumko")
 theme_override_styles/hover = SubResource("StyleBoxFlat_50pq7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_tkxxe")
-text = "Exit"
+text = "EXIT"
 alignment = 0
 icon_alignment = 1
-script = SubResource("GDScript_6rvja")
 
 [node name="MenuBotton" type="Button" parent="."]
 offset_right = 8.0
@@ -167,5 +207,8 @@ texture = ExtResource("4_8lwku")
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="OptionsButton/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="OptionsButton/Graphics" to="." method="_on_graphics_pressed"]
+[connection signal="pressed" from="OptionsButton/Audio" to="." method="_on_audio_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="ExitButton" method="_on_pressed"]

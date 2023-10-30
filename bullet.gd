@@ -2,6 +2,8 @@ extends Node3D
 
 const SPEED = 300.0
 
+var velocity = Vector3(0, 0, -SPEED)
+
 @onready var mesh = $MeshInstance3D
 @onready var ray = $RayCast3D
 @onready var particles = $GPUParticles3D
@@ -12,12 +14,14 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	position += transform.basis * Vector3(0,0, -SPEED) * delta
+func _physics_process(delta):
 	if ray.is_colliding():
 		mesh.visible = false
 		particles.emitting = true
+		velocity = Vector3(0, 0, 0)
 		await get_tree().create_timer(1.0).timeout
+	else:
+		position += transform.basis * velocity * delta
 		
 
 func _on_timer_timeout():

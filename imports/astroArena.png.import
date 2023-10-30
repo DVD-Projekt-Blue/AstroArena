@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brdbewty4rp2v"
-path="res://.godot/imported/cobra_mk_-_3_4.png-08ca89547e11d86c4a781f1e32a7f725.ctex"
+uid="uid://bo0b7646oxyso"
+path="res://.godot/imported/astroArena.png-abee70c3e689c991792d9b3f00e2ed5c.ctex"
 metadata={
 "vram_texture": false
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://imports/cobra_mk_-_3_4.png"
-dest_files=["res://.godot/imported/cobra_mk_-_3_4.png-08ca89547e11d86c4a781f1e32a7f725.ctex"]
+source_file="res://imports/astroArena.png"
+dest_files=["res://.godot/imported/astroArena.png-abee70c3e689c991792d9b3f00e2ed5c.ctex"]
 
 [params]
 
@@ -22,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
