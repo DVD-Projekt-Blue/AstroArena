@@ -1,8 +1,7 @@
-res://Blur.gdshader
-res://Menu.gd
-res://Menu.tscn
 res://Level.tscn
+res://Blur.gdshader
 res://imports/GU-97.tscn
+res://Menu.tscn
 res://Pmenu.tscn
 res://station4.tscn
 res://bullet.tscn
@@ -11,5 +10,3 @@ res://controls.tscn
 res://graphics.tscn
 res://input_button.tscn
 res://audio.tscn
-res://controls.gd
-res://audio.gd
