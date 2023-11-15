@@ -1,34 +1,34 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699445944
+::res://::1700051461
 actualBullet.gd::GDScript::-1::1696319030::0::1::::<>Node3D<>::
 actualBullet.tscn::PackedScene::5515819710441898000::1696401177::0::1::::<><>::uid://bplnd7m6d20nt
 audio.gd::GDScript::-1::1698661346::0::1::::<>Control<>::
-audio.tscn::PackedScene::9163303688786469237::1698851914::0::1::::<><>::uid://dp75um7jdyrun::::res://imports/fonts/Eurostile.ttf<>res://audio.gd
-Blur.gdshader::Shader::-1::1698851914::0::1::::<><>::
+audio.tscn::PackedScene::9163303688786469237::1699717921::0::1::::<><>::uid://dp75um7jdyrun::::res://imports/fonts/Eurostile.ttf<>res://audio.gd
+Blur.gdshader::Shader::-1::1699717921::0::1::::<><>::
 bullet.gd::GDScript::-1::1698421837::0::1::::<>Node3D<>::
-bullet.tscn::PackedScene::5903630553732130291::1698851914::0::1::::<><>::res://bullet.gd
+bullet.tscn::PackedScene::5903630553732130291::1699717921::0::1::::<><>::res://bullet.gd
 Cockpit.tscn::PackedScene::974128613463916279::1695933712::0::1::::<><>::uid://dy0d155vmy1ni
 controls.gd::GDScript::-1::1698661266::0::1::::<>Control<>::
-controls.tscn::PackedScene::4741373789066176460::1698851914::0::1::::<><>::res://controls.gd<>uid://p3dujtw54uuu::::res://input_button.tscn<>uid://dp75um7jdyrun::::res://imports/fonts/Eurostile.ttf
-corvette.gd::GDScript::-1::1697215013::0::1::::<>CharacterBody3D<>::
-corvette.tscn::PackedScene::5689603802952739904::1698851914::0::1::::<><>::uid://b78j68qwv2skg::::res://imports/corvette/scene.gltf<>res://corvette.gd
+controls.tscn::PackedScene::4741373789066176460::1699717921::0::1::::<><>::res://controls.gd<>uid://p3dujtw54uuu::::res://input_button.tscn<>uid://dp75um7jdyrun::::res://imports/fonts/Eurostile.ttf
+corvette.gd::GDScript::-1::1699717844::0::1::::<>CharacterBody3D<>::
+corvette.tscn::PackedScene::5689603802952739904::1699717921::0::1::::<><>::uid://b78j68qwv2skg::::res://imports/corvette/scene.gltf<>res://corvette.gd
 export_presets.cfg::TextFile::-1::1695993436::0::1::::<><>::
 graphics.gd::GDScript::-1::1698426296::0::1::::<>Control<>::
-graphics.tscn::PackedScene::2585848074775399101::1698851914::0::1::::<><>::res://graphics.gd<>uid://dp75um7jdyrun::::res://imports/fonts/Eurostile.ttf
+graphics.tscn::PackedScene::2585848074775399101::1699717921::0::1::::<><>::res://graphics.gd<>uid://dp75um7jdyrun::::res://imports/fonts/Eurostile.ttf
 icon.svg::CompressedTexture2D::217058515942584370::1695493646::1695493651::1::::<><>::
-input_button.tscn::PackedScene::1110853601642825044::1698851914::0::1::::<><>::uid://dp75um7jdyrun::::res://imports/fonts/Eurostile.ttf
+input_button.tscn::PackedScene::1110853601642825044::1699717921::0::1::::<><>::uid://dp75um7jdyrun::::res://imports/fonts/Eurostile.ttf
 Level.gd::GDScript::-1::1697213167::0::1::::<>Node3D<>::
-Level.tscn::PackedScene::9150318434039749393::1698851912::0::1::::<><>::res://Level.gd<>uid://n440x4shiu44::::res://Cockpit.tscn<>uid://dxf7detsnv437::::res://space/hdr.png<>uid://ngk568eow8bk::::res://imports/GU-97.tscn<>uid://ddgevdqt1br2k::::res://station4.tscn<>uid://cncc7cslpmsu7::::res://corvette.tscn<>uid://bcsx8ow7wr6tt::::res://Pmenu.tscn
+Level.tscn::PackedScene::9150318434039749393::1699717918::0::1::::<><>::res://Level.gd<>uid://n440x4shiu44::::res://Cockpit.tscn<>uid://dxf7detsnv437::::res://space/hdr.png<>uid://ngk568eow8bk::::res://imports/GU-97.tscn<>uid://ddgevdqt1br2k::::res://station4.tscn<>uid://cncc7cslpmsu7::::res://corvette.tscn<>uid://bcsx8ow7wr6tt::::res://Pmenu.tscn
 Menu.gd::GDScript::-1::1698658959::0::1::::<>Node2D<>::
-Menu.tscn::PackedScene::335204922797645057::1698851913::0::1::::<><>::uid://dp75um7jdyrun::::res://imports/fonts/Eurostile.ttf<>res://Menu.gd<>uid://c08gaxscfv7xm::::res://imports/Snímek obrazovky (344).png
+Menu.tscn::PackedScene::335204922797645057::1699717919::0::1::::<><>::uid://dp75um7jdyrun::::res://imports/fonts/Eurostile.ttf<>res://Menu.gd<>uid://c08gaxscfv7xm::::res://imports/Snímek obrazovky (344).png
 PauseMenu.gd::GDScript::-1::1696408212::0::1::::<>Node2D<>::
 Pause_menu.tscn::PackedScene::8477415198789025507::1696157343::0::1::::<><>::res://PauseMenu.gd<>uid://dp75um7jdyrun
 Pmenu.gd::GDScript::-1::1698230920::0::1::::<>ColorRect<>::
-Pmenu.tscn::PackedScene::2565413363371368829::1698851913::0::1::::<><>::res://Blur.gdshader<>res://Pmenu.gd<>uid://dp75um7jdyrun::::res://imports/fonts/Eurostile.ttf
-station4.tscn::PackedScene::7382495401345826412::1698851914::0::1::::<><>::uid://drxhgfw68q0au::::res://imports/station4/textures/spacestation_main2_baseColor.jpeg<>uid://ccvmrq2o3jico::::res://imports/station4/textures/spacestation_main2_metallicRoughness.png<>uid://by38rnxvq75b4::::res://imports/station4/textures/spacestation_main2_emissive.jpeg<>uid://bldcxei5lrvmo::::res://imports/station4/textures/spacestation_main2_normal.png<>uid://yubxfxdkidr4::::res://imports/station4/textures/spacestation_main_baseColor.jpeg<>uid://1ljf4xx0t4vk::::res://imports/station4/textures/spacestation_main_metallicRoughness.png<>uid://bj2gwq0a8lg7p::::res://imports/station4/textures/spacestation_main_emissive.jpeg<>uid://dvohfvekdgmuf::::res://imports/station4/textures/spacestation_main_normal.png
+Pmenu.tscn::PackedScene::2565413363371368829::1699717919::0::1::::<><>::res://Blur.gdshader<>res://Pmenu.gd<>uid://dp75um7jdyrun::::res://imports/fonts/Eurostile.ttf
+station4.tscn::PackedScene::7382495401345826412::1699717920::0::1::::<><>::uid://drxhgfw68q0au::::res://imports/station4/textures/spacestation_main2_baseColor.jpeg<>uid://ccvmrq2o3jico::::res://imports/station4/textures/spacestation_main2_metallicRoughness.png<>uid://by38rnxvq75b4::::res://imports/station4/textures/spacestation_main2_emissive.jpeg<>uid://bldcxei5lrvmo::::res://imports/station4/textures/spacestation_main2_normal.png<>uid://yubxfxdkidr4::::res://imports/station4/textures/spacestation_main_baseColor.jpeg<>uid://1ljf4xx0t4vk::::res://imports/station4/textures/spacestation_main_metallicRoughness.png<>uid://bj2gwq0a8lg7p::::res://imports/station4/textures/spacestation_main_emissive.jpeg<>uid://dvohfvekdgmuf::::res://imports/station4/textures/spacestation_main_normal.png
 test.tscn::PackedScene::5685545876458766310::1696419132::0::1::::<><>::uid://c2me6fp8bc6pv
 ::res://addons/::1695978252
-::res://imports/::1698851913
+::res://imports/::1699717919
 311734.jpg::CompressedTexture2D::3465055727728059092::1695926951::1695926964::1::::<><>::
 415844.jpg::CompressedTexture2D::8075362867634675845::1695927170::1695927334::1::::<><>::
 416633.jpg::CompressedTexture2D::9201663778458956693::1695927249::1695927334::1::::<><>::
@@ -43,7 +43,7 @@ cobra_mk_-_3_4.png::CompressedTexture2D::3585893204965094399::1698356700::169835
 F63_Condor.gltf::PackedScene::6693011193533548687::1695491222::1695540889::1::::<><>::
 GU-97.gd::GDScript::-1::1697538933::0::1::::<>CharacterBody3D<>::
 GU-97.gltf::PackedScene::3654006476790840295::1695491380::1695543370::1::::<><>::
-GU-97.tscn::PackedScene::925503656967344640::1698851913::0::1::::<><>::res://imports/GU-97.gd<>uid://c3fd06dncbffa::::res://imports/sounds/shooting_start.mp3<>uid://csmb15gf7523j::::res://imports/sounds/shooting.mp3<>uid://bmcmfve3xbpak::::res://imports/sounds/shooting_end.mp3
+GU-97.tscn::PackedScene::925503656967344640::1699717919::0::1::::<><>::res://imports/GU-97.gd<>uid://c3fd06dncbffa::::res://imports/sounds/shooting_start.mp3<>uid://csmb15gf7523j::::res://imports/sounds/shooting.mp3<>uid://bmcmfve3xbpak::::res://imports/sounds/shooting_end.mp3
 krait_mk1_final.glb::PackedScene::6938028890317806002::1695490069::1695540891::1::::<><>::
 Snímek obrazovky (344).png::CompressedTexture2D::6596052462119531602::1666111913::1695974609::1::::<><>::
 ::res://imports/bullet2/::1696308376

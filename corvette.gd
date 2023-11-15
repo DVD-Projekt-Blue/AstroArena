@@ -15,14 +15,14 @@ func _ready():
 func _physics_process(delta):
 	#velocity = Vector3.ZERO
 	
-	#nav_agent.set_target_position(player.global_transform.origin)
+	nav_agent.set_target_position(player.global_transform.origin)
 	var current_location = global_transform.origin
 	var next_nav_point = nav_agent.get_next_path_position()
 	var new_velocity = (next_nav_point - current_location).normalized() * -SPEED
 	
 	velocity = new_velocity
 	move_and_slide()
-	#velocity = (next_nav_point - global_transform.origin).normalized() * -SPEED
+	velocity = (next_nav_point - global_transform.origin).normalized() * -SPEED
 	
 	look_at(Vector3(player.global_position.x, player.global_position.y, player.global_position.z), Vector3.UP  )
 	
