@@ -91,6 +91,13 @@ theme_override_fonts/font = ExtResource("1_8q2eo")
 theme_override_font_sizes/font_size = 30
 text = "MSAA"
 
+[node name="Resolution" type="Label" parent="Menu/Labels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_fonts/font = ExtResource("1_8q2eo")
+theme_override_font_sizes/font_size = 30
+text = "Resolution"
+
 [node name="Options" type="VBoxContainer" parent="Menu"]
 layout_mode = 2
 size_flags_horizontal = 6
@@ -158,6 +165,15 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_mhp6s")
 theme_override_styles/hover = SubResource("StyleBoxFlat_icu7h")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_4jbne")
+
+[node name="ResolutionDropdown" type="OptionButton" parent="Menu/Options"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_fonts/font = ExtResource("1_8q2eo")
+theme_override_font_sizes/font_size = 30
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -243,4 +259,5 @@ text = "APPLY"
 [connection signal="toggled" from="Menu/Options/VsyncCheck" to="." method="_on_vsync_check_toggled"]
 [connection signal="toggled" from="Menu/Options/FXAACheck" to="." method="_on_vsync_check_toggled"]
 [connection signal="item_selected" from="Menu/Options/MSAADropdown" to="." method="_on_aa_dropdown_item_selected"]
+[connection signal="item_selected" from="Menu/Options/ResolutionDropdown" to="." method="_on_resolution_dropdown_item_selected"]
 [connection signal="pressed" from="HBoxContainer/BackBtn" to="." method="_on_back_btn_pressed"]
