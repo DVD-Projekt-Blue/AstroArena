@@ -34,4 +34,5 @@ func update_target_location(target_location):
 func _on_area_3d_ship_hit(dam):
 	health -= dam
 	if health <= 0:
+		await get_tree().create_timer(0.05).timeout
 		queue_free()
