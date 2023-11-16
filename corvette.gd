@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 const SPEED = 10.0
+var health =  10
 
 var player = null
 #var next_nav_point = null
@@ -28,3 +29,9 @@ func _physics_process(delta):
 	
 func update_target_location(target_location):
 	nav_agent.target_position = target_location
+
+
+func _on_area_3d_ship_hit(dam):
+	health -= dam
+	if health <= 0:
+		queue_free()

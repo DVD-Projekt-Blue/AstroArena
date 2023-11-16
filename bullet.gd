@@ -1,6 +1,6 @@
 extends Node3D
 
-const SPEED = 300.0
+const SPEED = 200
 
 var velocity = Vector3(0, 0, -SPEED)
 
@@ -19,6 +19,9 @@ func _physics_process(delta):
 		mesh.visible = false
 		particles.emitting = true
 		velocity = Vector3(0, 0, 0)
+		ray.enabled = false
+		if ray.get_collider().is_in_group("enemy"):
+			ray.get_collider().hit()
 		await get_tree().create_timer(1.0).timeout
 	else:
 		position += transform.basis * velocity * delta

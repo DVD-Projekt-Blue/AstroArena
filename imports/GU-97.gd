@@ -85,6 +85,7 @@ func get_input(delta):
 	if Input.is_action_pressed("shoot"):
 		#await get_tree().create_timer(0.2).timeout
 		shoot()
+
 	
 	if Input.is_action_just_pressed("shoot"):
 		#start_shooting.play()
