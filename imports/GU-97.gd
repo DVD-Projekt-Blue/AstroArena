@@ -84,6 +84,7 @@ func get_input(delta):
 	
 	if Input.is_action_pressed("shoot"):
 		#await get_tree().create_timer(0.2).timeout
+		$TraumaCauser.cause_trauma()
 		shoot()
 
 	
@@ -105,4 +106,3 @@ func _physics_process(delta):
 	move_and_collide(vel * delta)
 	transform.basis = transform.basis.rotated(transform.basis.y, pitch_input * yaw_speed * delta)
 	transform.basis = transform.basis.rotated(transform.basis.x, yaw_input * pitch_speed * delta)
-

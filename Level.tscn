@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://d3mqn4lo1yhif"]
+[gd_scene load_steps=13 format=3 uid="uid://d3mqn4lo1yhif"]
 
 [ext_resource type="Script" path="res://Level.gd" id="1_4hnoh"]
 [ext_resource type="PackedScene" uid="uid://n440x4shiu44" path="res://Cockpit.tscn" id="1_l4waf"]
 [ext_resource type="Texture2D" uid="uid://dxf7detsnv437" path="res://space/hdr.png" id="1_sgc6w"]
 [ext_resource type="PackedScene" uid="uid://ngk568eow8bk" path="res://imports/GU-97.tscn" id="2_485lo"]
 [ext_resource type="PackedScene" uid="uid://ddgevdqt1br2k" path="res://station4.tscn" id="6_iyb8r"]
+[ext_resource type="PackedScene" uid="uid://c5r7xilp2j2yt" path="res://shakeable_camera.tscn" id="6_w3e6e"]
 [ext_resource type="PackedScene" uid="uid://cncc7cslpmsu7" path="res://corvette.tscn" id="7_0u7tv"]
 [ext_resource type="PackedScene" uid="uid://bcsx8ow7wr6tt" path="res://Pmenu.tscn" id="7_vtarl"]
 
@@ -51,11 +52,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.361, 0, 63.3507)
 [node name="Cockpit" parent="GU-97" instance=ExtResource("1_l4waf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28, -0.96)
 
+[node name="ShakeableCamera" parent="GU-97/Cockpit" instance=ExtResource("6_w3e6e")]
+
 [node name="Camera3D" type="Camera3D" parent="GU-97/Cockpit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.08616e-07, -9.53674e-07)
+visible = false
 
 [node name="Camera3D2" type="Camera3D" parent="GU-97/Cockpit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.24157, 18.36)
+visible = false
 fov = 90.6
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

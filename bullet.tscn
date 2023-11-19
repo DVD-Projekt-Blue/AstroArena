@@ -46,7 +46,7 @@ height = 0.4
 script = ExtResource("1_dn7ot")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 2.0
 one_shot = true
 autostart = true
 
