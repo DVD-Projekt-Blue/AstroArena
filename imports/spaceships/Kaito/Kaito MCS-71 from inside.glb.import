@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bhmyqf2b8c7jl"
-path="res://.godot/imported/scene.gltf-332b006d7a4e7a6e17fae17a15149d16.scn"
+uid="uid://w5byasxofy5p"
+path="res://.godot/imported/Kaito MCS-71 from inside.glb-96c228e12e3f934a76dc8fb6168ff3d0.scn"
 
 [deps]
 
-source_file="res://imports/spaceship1/scene.gltf"
-dest_files=["res://.godot/imported/scene.gltf-332b006d7a4e7a6e17fae17a15149d16.scn"]
+source_file="res://Kaito MCS-71 from inside.glb"
+dest_files=["res://.godot/imported/Kaito MCS-71 from inside.glb-96c228e12e3f934a76dc8fb6168ff3d0.scn"]
 
 [params]
 
