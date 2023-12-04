@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cd1p6c6jdeb3a"
-path="res://.godot/imported/Kaito MCS-71 from outside.glb-51fd12973a4183cf167839515725e091.scn"
+path="res://.godot/imported/Kaito MCS-71 from outside.glb-a7619165136cfde34adc0ea8a8e36397.scn"
 
 [deps]
 
-source_file="res://Kaito MCS-71 from outside.glb"
-dest_files=["res://.godot/imported/Kaito MCS-71 from outside.glb-51fd12973a4183cf167839515725e091.scn"]
+source_file="res://imports/spaceships/Kaito/Kaito MCS-71 from outside.glb"
+dest_files=["res://.godot/imported/Kaito MCS-71 from outside.glb-a7619165136cfde34adc0ea8a8e36397.scn"]
 
 [params]
 

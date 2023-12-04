@@ -7,6 +7,8 @@ var player = null
 #var next_nav_point = null
 #var new_velocity = null
 
+signal enemy_dead()
+
 @export var player_path : NodePath
 @onready var nav_agent = $NavigationAgent3D
 
@@ -22,7 +24,7 @@ func _physics_process(delta):
 	var new_velocity = (next_nav_point - current_location).normalized() * -SPEED
 	
 	velocity = new_velocity
-	move_and_slide()
+	#move_and_slide()
 	velocity = (next_nav_point - global_transform.origin).normalized() * -SPEED
 	
 	look_at(Vector3(player.global_position.x, player.global_position.y, player.global_position.z), Vector3.UP  )
@@ -36,3 +38,4 @@ func _on_area_3d_ship_hit(dam):
 	if health <= 0:
 		await get_tree().create_timer(0.05).timeout
 		queue_free()
+		emit_signal("enemy_dead")

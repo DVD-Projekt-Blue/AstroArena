@@ -11,7 +11,7 @@ size = Vector3(7899.06, 5166.47, 2329.04)
 size = Vector3(6209.57, 4837.88, 2777.23)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pyn33"]
-size = Vector3(2974.24, 6827.21, 1995.55)
+size = Vector3(2974.24, 6827.21, 2414.8)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kdee1"]
 size = Vector3(0.8, 0.22, 1.7)
@@ -50,7 +50,7 @@ collision_mask = 2
 script = ExtResource("3_fihk2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/_low_obj_cleaner_materialmerger_gles/Object_10/Area3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5368.08, -178.346)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5368.08, 125.895)
 shape = SubResource("BoxShape3D_pyn33")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
