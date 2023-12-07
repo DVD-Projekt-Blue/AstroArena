@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://e1m1ngajve62"]
+[gd_scene load_steps=15 format=3 uid="uid://e1m1ngajve62"]
 
 [ext_resource type="FontFile" uid="uid://dp75um7jdyrun" path="res://imports/fonts/Eurostile.ttf" id="1_hgtaf"]
 [ext_resource type="Script" path="res://Menu.gd" id="1_ujgaq"]
@@ -22,24 +22,6 @@ bg_color = Color(1, 0.592157, 0.156863, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riqqn"]
 content_margin_left = 20.0
 bg_color = Color(1, 0.588235, 0.156863, 1)
-
-[sub_resource type="GDScript" id="GDScript_1x0gg"]
-script/source = "extends Button
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
-
-
-func _on_pressed():
-	get_tree().change_scene_to_file(\"res://Level.tscn\")
-"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4rc3i"]
 content_margin_left = 20.0
@@ -94,7 +76,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_riqqn")
 text = "PLAY"
 alignment = 0
 icon_alignment = 1
-script = SubResource("GDScript_1x0gg")
 
 [node name="OptionsButton" type="Button" parent="."]
 offset_top = 300.0
