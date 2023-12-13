@@ -52,7 +52,7 @@ func _on_aa_dropdown_item_selected(index):
 	pass
 
 func _on_resolution_dropdown_item_selected(index):
-	if index == 0:
+	sif index == 0:
 		# Nastavit defaultní rozlišení
 		DisplayServer.window_set_size(Vector2(1920, 1080))
 	else:
