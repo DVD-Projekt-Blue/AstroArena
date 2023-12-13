@@ -4,8 +4,8 @@ extends Node3D
 @onready var spawns = $Spawns
 @onready var navigation_region = $NavigationRegion3D
 
-var enemy_ship = load("res://imports/corvette/corvette.tscn")
-var instance
+var enemy_ship = preload("res://corvette.tscn") #předpřipravý objekt, který se spawne
+var instance 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,10 +25,10 @@ func _unhandled_input(event):
 	#return parent_node.get_child(random_id)
 
 
-func _on_corvette_enemy_dead():
+func _on_corvette_enemy_dead(): #funkce pro spawn
 	#var spawn_point = _get_random_child(spawns).global_position
-	await get_tree().create_timer(1).timeout
-	var spawn_point = $Spawns.get_child(0).global_position
-	instance = enemy_ship.instantiate()
-	instance.position = spawn_point
-	navigation_region.add_child(instance)
+	await get_tree().create_timer(1).timeout #počká vteřinu, před spawnem
+	var spawn_point = $Spawns.get_child(0).global_position #Vybere místo spawnu z nodů v nodu spawns ve scéně
+	instance = enemy_ship.instantiate() #vytvoří instanci objektu ke spawnu
+	instance.position = spawn_point #nastaví pozici spawnu
+	navigation_region.add_child(instance) #přidá objekt do scény

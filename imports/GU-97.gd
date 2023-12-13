@@ -26,7 +26,7 @@ var input_response = 6
 @onready var start_shooting = $ShootingStart
 @onready var shooting = $Shooting
 @onready var end_shooting = $ShootingEnd
-
+@onready var light = $Light
 var bullet = load("res://bullet.tscn")
 var instanceRight
 var instanceLeft
@@ -81,6 +81,8 @@ func get_input(delta):
 	speed.y = lerp(speed.y, input_vector.y * MAX_UPDOWN_SPEED, ACCELERATION * delta)
 	speed.z = lerp(speed.z, input_vector.z * MAX_FORWARD_SPEED, ACCELERATION * delta)
 	
+	if Input.is_action_just_pressed("light"):
+		light.visible = !light.visible
 	
 	if Input.is_action_pressed("shoot"):
 		#await get_tree().create_timer(0.2).timeout
