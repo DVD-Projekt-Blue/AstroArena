@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var player = $"NavigationRegion3D/GU-97"
+@onready var player = $"NavigationRegion3D/Kaito MCS-71"
 @onready var spawns = $Spawns
 @onready var navigation_region = $NavigationRegion3D
 

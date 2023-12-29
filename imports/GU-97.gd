@@ -6,13 +6,12 @@ const MAX_SIDEWAYS_SPEED = 50.0
 const MAX_UPDOWN_SPEED = 100.0
 const ACCELERATION = 0.2
 const MOUSE_SENSITIVITY = 0.1
-const INPUT_DEADZONE = 0.2
+const INPUT_DEADZONE = 0.1
 const BOUNCE_BACK_FORCE = 3.0
 
 var roll_speed = 1.5
 var yaw_speed = 0.5
 var pitch_speed = 1.5
-
 var vel = Vector3.ZERO
 var speed = Vector3.ZERO
 var roll_input = 0.0
@@ -22,7 +21,7 @@ var input_response = 6
 
 @onready var barrel_right = $RayCast3D2
 @onready var barrel_left = $RayCast3D
-@onready var mesh = $Mesh2
+#@onready var mesh = $Mesh2
 @onready var start_shooting = $ShootingStart
 @onready var shooting = $Shooting
 @onready var end_shooting = $ShootingEnd
@@ -34,7 +33,6 @@ var instanceLeft
 
 func _ready():
 	pass
-	
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -74,30 +72,26 @@ func get_input(delta):
 	if Input.is_action_pressed("strafe down"):
 		input_vector.y -= 1.0
 	roll_input = lerp(roll_input, Input.get_action_strength("roll left") - Input.get_action_strength("roll right"), input_response * delta)
-	
+
 	input_vector = input_vector.normalized()
 
 	speed.x = lerp(speed.x, input_vector.x * MAX_SIDEWAYS_SPEED, ACCELERATION * delta)
 	speed.y = lerp(speed.y, input_vector.y * MAX_UPDOWN_SPEED, ACCELERATION * delta)
 	speed.z = lerp(speed.z, input_vector.z * MAX_FORWARD_SPEED, ACCELERATION * delta)
-	
+
 	if Input.is_action_just_pressed("light"):
 		light.visible = !light.visible
-	
+
 	if Input.is_action_pressed("shoot"):
 		#await get_tree().create_timer(0.2).timeout
 		$TraumaCauser.cause_trauma()
 		shoot()
 
-	
 	if Input.is_action_just_pressed("shoot"):
-		#start_shooting.play()
-		#await get_tree().create_timer(1.0).timeout
 		shooting.play()
-		
+
 
 	if Input.is_action_just_released("shoot"):
-		#start_shooting.stop()
 		shooting.stop()
 		end_shooting.play()
 

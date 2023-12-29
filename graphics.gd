@@ -51,18 +51,18 @@ func _on_aa_dropdown_item_selected(index):
 	# Zde implementujte nastavení MSAA podle indexu
 	pass
 
-func _on_resolution_dropdown_item_selected(index):
-	sif index == 0:
-		# Nastavit defaultní rozlišení
-		DisplayServer.window_set_size(Vector2(1920, 1080))
-	else:
-		# Získat šířku a výšku z vybraného rozlišení
-		var resolutionArray = resolutionOptions[index].split("x")
-		var width = int(resolutionArray[0])
-		var height = int(resolutionArray[1])
-
-		# Nastavit rozlišení
-		DisplayServer.window_set_size(Vector2(width, height))
+#func _on_resolution_dropdown_item_selected(index):
+#	sif index == 0:
+#		# Nastavit defaultní rozlišení
+#		DisplayServer.window_set_size(Vector2(1920, 1080))
+#	else:
+#		# Získat šířku a výšku z vybraného rozlišení
+#		var resolutionArray = resolutionOptions[index].split("x")
+#		var width = int(resolutionArray[0])
+#		var height = int(resolutionArray[1])
+#
+#		# Nastavit rozlišení
+#		DisplayServer.window_set_size(Vector2(width, height))
 
 func _on_back_btn_pressed():
 	get_tree().change_scene_to_file("res://Menu.tscn")

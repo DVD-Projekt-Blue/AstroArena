@@ -1,6 +1,6 @@
 extends Node3D
 
-const SPEED = 200
+const SPEED = 400
 
 var velocity = Vector3(0, 0, -SPEED)
 

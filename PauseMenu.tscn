@@ -1,0 +1,258 @@
+[gd_scene load_steps=18 format=3 uid="uid://bcsx8ow7wr6tt"]
+
+[ext_resource type="Shader" path="res://Blur.gdshader" id="1_blvis"]
+[ext_resource type="Script" path="res://PauseMenu.gd" id="2_c4bfa"]
+[ext_resource type="FontFile" uid="uid://dp75um7jdyrun" path="res://imports/fonts/Eurostile.ttf" id="3_r8ort"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4co4v"]
+shader = ExtResource("1_blvis")
+shader_parameter/blur = 0.0
+shader_parameter/brightness = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1fo3t"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6qk2"]
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wasvf"]
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egu0c"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kopxn"]
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3h70"]
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7kt6w"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8en07"]
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bpg1l"]
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[sub_resource type="Animation" id="Animation_s2enn"]
+resource_name = "Pause"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/blur")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [0.0, 2.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/brightness")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [1.0, 0.6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gsq7q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/blur")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/brightness")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0eoul"]
+resource_name = "Unpause"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/blur")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/brightness")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rsuyy"]
+_data = {
+"Pause": SubResource("Animation_s2enn"),
+"RESET": SubResource("Animation_gsq7q"),
+"Unpause": SubResource("Animation_0eoul")
+}
+
+[node name="PauseMenu" type="ColorRect"]
+process_mode = 3
+material = SubResource("ShaderMaterial_4co4v")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_c4bfa")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 4.0
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_r8ort")
+theme_override_font_sizes/font_size = 40
+text = "Pause"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_fonts/font = ExtResource("3_r8ort")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_1fo3t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h6qk2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wasvf")
+text = "Continue"
+
+[node name="MainMenuButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_fonts/font = ExtResource("3_r8ort")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_egu0c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kopxn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x3h70")
+text = "Main Menu"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.588235, 0.156863, 1)
+theme_override_fonts/font = ExtResource("3_r8ort")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_7kt6w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8en07")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bpg1l")
+text = "Quit"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rsuyy")
+}

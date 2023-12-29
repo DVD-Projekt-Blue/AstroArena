@@ -18,6 +18,8 @@ size = Vector3(0.8, 0.22, 1.7)
 
 [node name="Corvette" groups=["enemies"] instance=ExtResource("1_bvwq5")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.199777, -2.53426, 8.08479)
+collision_layer = 3
+collision_mask = 3
 floor_stop_on_slope = false
 floor_block_on_wall = false
 floor_max_angle = 0.0
@@ -27,8 +29,8 @@ script = ExtResource("2_xb0d8")
 transform = Transform3D(0.005, 0, 0, 0, -2.18557e-10, 0.005, 0, -0.005, -2.18557e-10, 0, 0, 0)
 
 [node name="Area3D" type="Area3D" parent="Sketchfab_model/_low_obj_cleaner_materialmerger_gles/Object_2" index="0" groups=["enemy"]]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("3_fihk2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/_low_obj_cleaner_materialmerger_gles/Object_2/Area3D" index="0"]
@@ -36,8 +38,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5745.63, -92.9571)
 shape = SubResource("BoxShape3D_0x6om")
 
 [node name="Area3D" type="Area3D" parent="Sketchfab_model/_low_obj_cleaner_materialmerger_gles/Object_8" index="0" groups=["enemy"]]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("3_fihk2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/_low_obj_cleaner_materialmerger_gles/Object_8/Area3D" index="0"]
@@ -45,8 +47,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -490.831, 49.7327)
 shape = SubResource("BoxShape3D_6ixke")
 
 [node name="Area3D" type="Area3D" parent="Sketchfab_model/_low_obj_cleaner_materialmerger_gles/Object_10" index="0" groups=["enemy"]]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("3_fihk2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/_low_obj_cleaner_materialmerger_gles/Object_10/Area3D" index="0"]

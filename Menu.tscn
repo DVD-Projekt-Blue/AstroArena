@@ -45,11 +45,17 @@ bg_color = Color(1, 0.588235, 0.156863, 1)
 content_margin_left = 20.0
 bg_color = Color(1, 0.588235, 0.156863, 1)
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Control"]
 process_mode = 3
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
 script = ExtResource("1_ujgaq")
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_top = 10.0
 offset_right = 660.0
 offset_bottom = 120.0
@@ -60,6 +66,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PlayButton" type="Button" parent="."]
+layout_mode = 0
 offset_top = 200.0
 offset_right = 300.0
 offset_bottom = 280.0
@@ -78,6 +85,7 @@ alignment = 0
 icon_alignment = 1
 
 [node name="OptionsButton" type="Button" parent="."]
+layout_mode = 0
 offset_top = 300.0
 offset_right = 300.0
 offset_bottom = 380.0
@@ -156,6 +164,7 @@ icon_alignment = 1
 
 [node name="ExitButton" type="Button" parent="."]
 top_level = true
+layout_mode = 0
 offset_top = 900.0
 offset_right = 300.0
 offset_bottom = 980.0
@@ -173,23 +182,25 @@ text = "EXIT"
 alignment = 0
 icon_alignment = 1
 
-[node name="MenuBotton" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
-
 [node name="TextureRect" type="TextureRect" parent="."]
 show_behind_parent = true
+layout_mode = 0
 offset_right = 2560.0
 offset_bottom = 1440.0
 scale = Vector2(0.75, 0.75)
 mouse_filter = 2
 texture = ExtResource("4_8lwku")
 
+[connection signal="mouse_entered" from="PlayButton" to="." method="_on_play_button_mouse_entered"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]
-[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="mouse_entered" from="OptionsButton" to="." method="_on_options_button_mouse_entered"]
+[connection signal="mouse_entered" from="OptionsButton/Controls" to="." method="_on_controls_mouse_entered"]
 [connection signal="pressed" from="OptionsButton/Controls" to="." method="_on_controls_pressed"]
+[connection signal="mouse_entered" from="OptionsButton/Graphics" to="." method="_on_graphics_mouse_entered"]
 [connection signal="pressed" from="OptionsButton/Graphics" to="." method="_on_graphics_pressed"]
+[connection signal="mouse_entered" from="OptionsButton/Audio" to="." method="_on_audio_mouse_entered"]
 [connection signal="pressed" from="OptionsButton/Audio" to="." method="_on_audio_pressed"]
+[connection signal="mouse_entered" from="ExitButton" to="." method="_on_exit_button_mouse_entered"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="ExitButton" method="_on_pressed"]

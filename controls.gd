@@ -15,6 +15,7 @@ var input_actions = {
 	"strafe left": "Strafe left",
 	"strafe up": "Strafe up",
 	"strafe down": "Strafe down",
+	"light": "Light",
 }
 
 func _ready():
@@ -66,7 +67,6 @@ func _input(event):
 			
 func _update_action_list(button, event):
 	button.find_child("LabelInput").text = event.as_text().trim_suffix(" (Physical)")
-
 
 func _on_back_btn_pressed():
 	get_tree().change_scene_to_file("res://Menu.tscn")

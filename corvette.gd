@@ -14,8 +14,9 @@ signal enemy_dead()
 
 func _ready():
 	player = get_node(player_path)
-	
+
 func _physics_process(delta):
+	look_at(Vector3(player.global_position.x, player.global_position.y, player.global_position.z), Vector3.UP)
 	#velocity = Vector3.ZERO
 	
 	#nav_agent.set_target_position(player.global_transform.origin)
@@ -27,7 +28,6 @@ func _physics_process(delta):
 	#move_and_slide()
 	#velocity = (next_nav_point - global_transform.origin).normalized() * -SPEED
 	
-	look_at(Vector3(player.global_position.x, player.global_position.y, player.global_position.z), Vector3.UP  )
 	
 func update_target_location(target_location):
 	nav_agent.target_position = target_location
@@ -38,4 +38,4 @@ func _on_area_3d_ship_hit(dam):
 	if health <= 0:
 		await get_tree().create_timer(0.05).timeout
 		queue_free() #smaže enemy
-		emit_signal("enemy_dead") #vyšle signál do respawn funkce ve skriptu level
+		#emit_signal("enemy_dead") #vyšle signál do respawn funkce ve skriptu level
