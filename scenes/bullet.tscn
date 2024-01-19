@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqd06ygns2kbr"]
+
+[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_wkiig"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1okna"]
+albedo_color = Color(1, 0.756863, 0.345098, 1)
+emission_enabled = true
+emission = Color(1, 0.756863, 0.172549, 1)
+emission_energy_multiplier = 15.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_feq03"]
+material = SubResource("StandardMaterial3D_1okna")
+radial_segments = 40
+rings = 10
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7uhu"]
+albedo_color = Color(1, 0.709804, 0.32549, 1)
+emission_enabled = true
+emission = Color(1, 0.709804, 0.32549, 1)
+emission_energy_multiplier = 8.0
+
+[sub_resource type="Curve" id="Curve_d5i6c"]
+max_value = 100.0
+_data = [Vector2(0, 0), 0.0, 4.15653, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_efs6y"]
+curve = SubResource("Curve_d5i6c")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ioxm1"]
+lifetime_randomness = 0.2
+spread = 180.0
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+gravity = Vector3(0, 0, 0)
+damping_min = 2.0
+damping_max = 10.0
+damping_curve = SubResource("CurveTexture_efs6y")
+scale_min = 0.2
+scale_max = 0.5
+collision_mode = 2
+
+[sub_resource type="SphereMesh" id="SphereMesh_ulyuc"]
+radius = 0.2
+height = 0.4
+
+[node name="Bullet" type="Node3D"]
+script = ExtResource("1_wkiig")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 0.4, 0, 0, 0)
+target_position = Vector3(0, 0, -0.5)
+collide_with_areas = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.04, 0, 0, 0, -2.18557e-08, -0.04, 0, 0.5, -1.74846e-09, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_feq03")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000793546, -0.00256205, 0.527442)
+material_override = SubResource("StandardMaterial3D_q7uhu")
+emitting = false
+amount = 10
+one_shot = true
+speed_scale = 2.0
+explosiveness = 1.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_ioxm1")
+draw_pass_1 = SubResource("SphereMesh_ulyuc")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

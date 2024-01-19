@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://bqttajb6waoy5"]
-
-[node name="Node3D" type="Node3D"]
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="."]

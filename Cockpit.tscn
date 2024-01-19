@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://n440x4shiu44"]
-
-[ext_resource type="PackedScene" uid="uid://dy0d155vmy1ni" path="res://imports/cockpit/scene.gltf" id="1_aqvkk"]
-
-[node name="scene" instance=ExtResource("1_aqvkk")]

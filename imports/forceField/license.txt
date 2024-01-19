@@ -1,0 +1,11 @@
+Model Information:
+* title:	Spherical hex force field
+* source:	https://sketchfab.com/3d-models/spherical-hex-force-field-bb80cd68b5a74bd989cb18c186192c9b
+* author:	Adamante (https://sketchfab.com/Adamant6686)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Spherical hex force field" (https://sketchfab.com/3d-models/spherical-hex-force-field-bb80cd68b5a74bd989cb18c186192c9b) by Adamante (https://sketchfab.com/Adamant6686) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

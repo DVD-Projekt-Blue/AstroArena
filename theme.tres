@@ -1,0 +1,32 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://brj8jmsa6vurj"]
+
+[ext_resource type="FontFile" uid="uid://dp75um7jdyrun" path="res://imports/fonts/Eurostile.ttf" id="1_lv0qn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_705ct"]
+content_margin_left = 40.0
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ip8po"]
+content_margin_left = 20.0
+content_margin_right = 30.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3f0c"]
+content_margin_left = 40.0
+bg_color = Color(1, 0.588235, 0.156863, 1)
+
+[resource]
+default_font = ExtResource("1_lv0qn")
+default_font_size = 60
+Button/colors/font_color = Color(1, 0.588235, 0.156863, 1)
+Button/colors/font_focus_color = Color(1, 0.588235, 0.156863, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_lv0qn")
+Button/styles/hover = SubResource("StyleBoxFlat_705ct")
+Button/styles/normal = SubResource("StyleBoxEmpty_ip8po")
+Button/styles/pressed = SubResource("StyleBoxFlat_c3f0c")
+VSlider/styles/grabber_area = null
+VSlider/styles/grabber_area_highlight = null
+VSlider/styles/slider = null

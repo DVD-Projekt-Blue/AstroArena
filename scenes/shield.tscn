@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://3rkupwxsecu1"]
+
+[ext_resource type="PackedScene" uid="uid://i18d45yhpulm" path="res://imports/forceField/scene.gltf" id="1_pseks"]
+
+[node name="scene" instance=ExtResource("1_pseks")]

@@ -1,0 +1,360 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 2958,
+      "max": [
+        99.32402801513672,
+        99.32402801513672,
+        99.32402801513672
+      ],
+      "min": [
+        -99.32402801513672,
+        -99.32402801513672,
+        -99.32402801513672
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 35496,
+      "componentType": 5126,
+      "count": 2958,
+      "max": [
+        0.996297299861908,
+        0.996297299861908,
+        0.996297299861908
+      ],
+      "min": [
+        -0.996297299861908,
+        -0.996297299861908,
+        -0.996297299861908
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 2958,
+      "max": [
+        1.2331340312957764,
+        0.984919548034668
+      ],
+      "min": [
+        0.0,
+        0.015080451965332031
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 23664,
+      "componentType": 5126,
+      "count": 2958,
+      "max": [
+        1.2331340312957764,
+        0.984919548034668
+      ],
+      "min": [
+        0.0,
+        0.015080451965332031
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 5868,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 70992,
+      "componentType": 5126,
+      "count": 3976,
+      "max": [
+        99.3675308227539,
+        99.3675308227539,
+        99.3675308227539
+      ],
+      "min": [
+        -99.3675308227539,
+        -99.3675308227539,
+        -99.3675308227539
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 118704,
+      "componentType": 5126,
+      "count": 3976,
+      "max": [
+        0.9985781908035278,
+        0.9985781908035278,
+        0.9985781908035278
+      ],
+      "min": [
+        -0.9985781908035278,
+        -0.9985781908035278,
+        -0.9985781908035278
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 47328,
+      "componentType": 5126,
+      "count": 3976,
+      "max": [
+        1.2668659687042236,
+        0.984919548034668
+      ],
+      "min": [
+        0.0,
+        0.015080451965332031
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 79136,
+      "componentType": 5126,
+      "count": 3976,
+      "max": [
+        1.2668659687042236,
+        0.984919548034668
+      ],
+      "min": [
+        0.0,
+        0.015080451965332031
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 23472,
+      "componentType": 5125,
+      "count": 17640,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Adamante (https://sketchfab.com/Adamant6686)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/spherical-hex-force-field-bb80cd68b5a74bd989cb18c186192c9b",
+      "title": "Spherical hex force field"
+    },
+    "generator": "Sketchfab-12.65.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 94032,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 110944,
+      "byteOffset": 94032,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 166416,
+      "byteOffset": 204976,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 371392,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "emissiveFactor": [
+        0.0,
+        0.05493482499482499,
+        0.0543633975706474
+      ],
+      "name": "material",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0,
+          0.6866853124353124,
+          0.6795424696330925,
+          0.6692987553311984
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.0
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "name": "material_1",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.6
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Sphere_6_M_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2,
+            "TEXCOORD_1": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Sphere_6_A_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TEXCOORD_0": 7,
+            "TEXCOORD_1": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "bd247889026e45a8ae3c7b8b99d3aae2.fbx"
+    },
+    {
+      "children": [
+        3,
+        5
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        -0.672519708446154,
+        -0.33675704947185237,
+        -0.6590234680058915,
+        0.0,
+        -0.24052440496845873,
+        0.9415915726210661,
+        -0.2356975201048083,
+        0.0,
+        0.6999037450721841,
+        -2.7755575615628914e-17,
+        -0.7142371788376263,
+        0.0,
+        8307.8427734375,
+        3486.796875,
+        4515.4375,
+        1.0
+      ],
+      "name": "CINEMA_4D_Editor"
+    },
+    {
+      "name": "Object_4"
+    },
+    {
+      "children": [
+        6,
+        7
+      ],
+      "name": "Sphere_6"
+    },
+    {
+      "mesh": 0,
+      "name": "Sphere_6_M_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Sphere_6_A_1"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
