@@ -3,7 +3,7 @@ extends CharacterBody3D
 const MAX_FORWARD_SPEED = 150.0
 const MAX_BACKWARD_SPEED = 50.0
 const MAX_SIDEWAYS_SPEED = 50.0
-const MAX_UPDOWN_SPEED = 100.0
+const MAX_UPDOWN_SPEED = 50.0
 const ACCELERATION = 0.2
 const MOUSE_SENSITIVITY = 0.1
 const INPUT_DEADZONE = 0.1
@@ -64,22 +64,22 @@ func get_input(delta):
 		input_vector.x += 1.0
 	if Input.is_action_pressed("thrust backward"):
 		input_vector.x -= 1.0
-	if Input.is_action_pressed("strafe right"):
-		input_vector.z += 1.0
-	if Input.is_action_pressed("strafe left"):
-		input_vector.z -= 1.0
 	if Input.is_action_pressed("strafe up"):
 		input_vector.y += 1.0
 	if Input.is_action_pressed("strafe down"):
 		input_vector.y -= 1.0
-	roll_input = lerp(roll_input, Input.get_action_strength("roll left") - Input.get_action_strength("roll right"), input_response * delta)
+	if Input.is_action_pressed("strafe right"):
+		input_vector.z += 1.0
+	if Input.is_action_pressed("strafe left"):
+		input_vector.z -= 1.0
+	roll_input = lerp(roll_input, Input.get_action_strength("roll right") - Input.get_action_strength("roll left"), input_response * delta)
 
 	input_vector = input_vector.normalized()
 
-	speed.x = lerp(speed.x, input_vector.x * MAX_FORWARD_SPEED, ACCELERATION * delta)
-	speed.y = lerp(speed.y, input_vector.y * MAX_UPDOWN_SPEED, ACCELERATION * delta)
-	speed.z = lerp(speed.z, input_vector.z * MAX_SIDEWAYS_SPEED, ACCELERATION * delta)
-
+	speed.x = lerp(speed.x, input_vector.x * MAX_FORWARD_SPEED, ACCELERATION*delta)
+	speed.y = lerp(speed.y, input_vector.y * MAX_UPDOWN_SPEED, ACCELERATION*delta)
+	speed.z = lerp(speed.z, input_vector.z * MAX_SIDEWAYS_SPEED, ACCELERATION*delta)
+	
 	if Input.is_action_just_pressed("light"):
 		light_left.visible = !light_left.visible
 		light_right.visible = !light_right.visible
@@ -98,8 +98,12 @@ func get_input(delta):
 
 func _physics_process(delta):
 	get_input(delta)
-	transform.basis = transform.basis.rotated(transform.basis.x.normalized(), -roll_input * roll_speed * delta)
+	transform.basis = transform.basis.rotated(transform.basis.x.normalized(), roll_input * roll_speed * delta)
 	vel = transform.basis.x * speed.x + transform.basis.y * speed.y + transform.basis.z * speed.z
-	move_and_collide(vel * delta)
 	transform.basis = transform.basis.rotated(transform.basis.y.normalized(), pitch_input * yaw_speed * delta)
 	transform.basis = transform.basis.rotated(transform.basis.z.normalized(), yaw_input * pitch_speed * delta)
+	var collision = move_and_collide(vel * delta)
+	if collision:
+		var reflect = collision.get_remainder().bounce(collision.get_normal())
+		velocity = velocity.bounce(collision.get_normal())
+		move_and_collide(reflect)

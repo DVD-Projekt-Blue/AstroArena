@@ -48,9 +48,6 @@ environment = SubResource("Environment_r05y7")
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_qi7iq")
 
-[node name="asteroid" parent="NavigationRegion3D" instance=ExtResource("11_147hu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-
 [node name="Station" parent="NavigationRegion3D" instance=ExtResource("6_iyb8r")]
 transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 1.36467, -136.65)
 
@@ -76,41 +73,43 @@ mouse_filter = 2
 
 [node name="Scenery" type="Node3D" parent="."]
 
+[node name="asteroid" parent="Scenery" instance=ExtResource("11_147hu")]
+
 [node name="asteroid2" parent="Scenery" instance=ExtResource("11_147hu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 38.0172, -50.0941, -71.1941)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 38.0172, -50.0941, -71.1941)
 
 [node name="asteroid3" parent="Scenery" instance=ExtResource("11_147hu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 71.4904, -21.2069, -11.6517)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 71.4904, -21.2069, -11.6517)
 
 [node name="asteroid4" parent="Scenery" instance=ExtResource("11_147hu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.2297, 41.9596, -14.724)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 64.2297, 41.9596, -14.724)
 
 [node name="asteroid5" parent="Scenery" instance=ExtResource("11_147hu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -46.1415, 54.6674, -15.9132)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -46.1415, 54.6674, -15.9132)
 
 [node name="asteroid6" parent="Scenery" instance=ExtResource("11_147hu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -76.7266, 0, -1.11131)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -76.7266, 0, -1.11131)
 
 [node name="asteroid7" parent="Scenery" instance=ExtResource("11_147hu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -62.3936, 0, 48.2019)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -62.3936, 0, 48.2019)
 
 [node name="asteroid8" parent="Scenery" instance=ExtResource("11_147hu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -20.6009, -23.62, 8.61588)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -20.6009, -23.62, 8.61588)
 
 [node name="asteroid9" parent="Scenery" instance=ExtResource("11_147hu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.01012, -34.9503, 51.5395)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -6.01012, -34.9503, 51.5395)
 
 [node name="asteroid10" parent="Scenery" instance=ExtResource("11_147hu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.62988, 39.8916, -20.3207)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -3.62988, 39.8916, -20.3207)
 
 [node name="asteroid11" parent="Scenery" instance=ExtResource("11_147hu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -44.6608, -19.0742, -20.1784)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -44.6608, -19.0742, -20.1784)
 
 [node name="asteroid12" parent="Scenery" instance=ExtResource("11_147hu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 56.7836, 0, 37.3431)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 56.7836, 0, 37.3431)
 
 [node name="asteroid13" parent="Scenery" instance=ExtResource("11_147hu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 21.3598, 22.4746, -8.17367)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 21.3598, 22.4746, -8.17367)
 
 [node name="SpawnLocations" type="Node3D" parent="."]
 
